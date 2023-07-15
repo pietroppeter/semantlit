@@ -1,2 +1,2 @@
-*.wordvectors
+*wordvectors*
 .DS_Store
