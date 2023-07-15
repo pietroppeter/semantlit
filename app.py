@@ -36,7 +36,7 @@ def submit():
 
 
 _ = st.text_input(label="Guess", value="", key="guess_input", on_change=submit)
-guess = st.session_state.guess
+guess = st.session_state.guess.lower()
 if guess:
     if guess in model.key_to_index:
         guesses.append(guess)
