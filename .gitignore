@@ -1,2 +1,3 @@
 *.wordvectors
 .DS_Store
+.venv
