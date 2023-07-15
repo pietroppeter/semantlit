@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 *.wordvectors
 .DS_Store
 .venv
+=======
+*wordvectors*
+.DS_Store
+>>>>>>> 37dcfe769fe427a029deac066a1180bc36e64d51
