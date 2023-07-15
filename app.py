@@ -48,9 +48,10 @@ if guess:
     for g in reversed(guesses):
         if g == SECRET_WORD:
             st.success(g)
-        else:    
-            st.write(g)
+        else:
             similarity = model.similarity(g, SECRET_WORD)
-            st.write(similarity)
+            col1, col2 = st.columns([4,1])
+            col1.write(g)
+            col2.write(f"{similarity:.2}")
     if len(guesses)>0 and guesses[-1] == SECRET_WORD:
         st.balloons()
