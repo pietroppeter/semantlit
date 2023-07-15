@@ -36,7 +36,7 @@ def submit():
     st.session_state.guess_input = ""
 
 
-_ = st.text_input(label="Guess", value="", key="guess_input", on_change=submit)
+_ = st.text_input(label="Indovina", value="", key="guess_input", on_change=submit)
 guess = st.session_state.guess.strip().lower()
 if guess:
     # check if guess is in model vocabulary
