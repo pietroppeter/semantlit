@@ -37,7 +37,7 @@ def submit():
 
 
 _ = st.text_input(label="Guess", value="", key="guess_input", on_change=submit)
-guess = st.session_state.guess.lower()
+guess = st.session_state.guess.strip().lower()
 if guess:
     # check if guess is in model vocabulary
     if guess in model.key_to_index:
