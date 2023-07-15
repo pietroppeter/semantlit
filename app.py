@@ -1,7 +1,10 @@
 import streamlit as st
 from gensim.models import KeyedVectors
 
-model = KeyedVectors.load("./word2vec/word2vec.wordvectors", mmap='r')
+try:
+    model = KeyedVectors.load("./word2vec/word2vec.wordvectors", mmap='r')
+except FileNotFoundError:
+    st.error("Word2Vec file not found")
 
 SECRET_WORD = "poesia"
 if "guesses" in st.session_state:
